@@ -2,9 +2,106 @@
 
 
 @section('content')
-    <header class="container text-center center-mid">
-        <h1>AdonisJs Blog</h1>
-        <p>Wlecome to my AdonisJs Blog</p>
+    <header class="container-fluid text-center">
+        <h1 class="title">AdonisJs Blog</h1>
+        <p class="subtitle">Welcome to my Adonis Blog</p>
     </header>
+
+    <div class="container-flui" style="margin-top: 1%">
+        <div class="row">
+            <aside class="col-md-6 left-aside">
+                <div class="latest-post-title text-center" style="border-radius: 5px">
+                    <h3>Latest Posts</h3>
+                    <img src="/pyramid.png" alt="" class="img-fluid" style="transform: rotate(180deg)" width="80">
+                </div>
+                
+                @each(post in posts)
+                    <div class="latest-post">
+                        <div class="container" style="padding-left: 7%"><h4>{{post.title}}</h4></div>
+                        <br>
+                        <div class="container text-center">
+                            <img class="card-img-top" src="https://miro.medium.com/max/3300/1*CvCRYWZTkhyqJIspP8ai_g.png" alt="post image" style="width: 90%">
+                        </div>
+                        <br>
+                        <div class="container card-body" style="padding-left: 7%">
+                            <div>
+                                {{post.body}}
+                            </div>
+                            <br><br>
+                            <a href="/posts/{{post.id}}"><button class="btn btn-primary">Continue Reading <i class="fa fa-long-arrow-right"></i></button></a>
+                        </div>
+                    </div>
+                @endeach
+            </aside>
+
+            <aside class="col-md-4 right-aside" style="">
+                <div class="home-aside">
+                    <div class="">
+                        <div class="aside-header">
+                            <h3 class="text-center">About</h3>
+                            <div class="text-center">
+                                <img src="https://cdn.auth0.com/blog/blog/AdonisJSLogo.png" alt="" class="img-fluid rounded-circle" width="60">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas et ex sed laoreet. Integer vel enim elit. In cursus odio eget tempor sodales. Maecenas dictum posuere ipsum. Praesent at ipsum enim. Vestibulum lobortis feugiat dapibus. Suspendisse at facilisis tellus. Integer consequat tempor est, ac consectetur enim scelerisque quis. Nullam ultrices felis et leo venenatis accumsan. Fusce consectetur vestibulum sollicitudin. Donec euismod sapien vitae urna porttitor dignissim. Sed et magna non ipsum dapibus gravida sit amet in magna. Nulla mollis eu massa ac hendrerit.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home-aside">
+                    <div class="aside-header">
+                        <h3 class="text-center">Follow</h3>
+                    </div>
+                    <br>
+                    <!-- social icons -->
+                    <div class="container text-center home-social-icons" style="font-size: 30px">
+                        <i class="fa fa-facebook-square"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-google-plus-circle"></i>
+                        <i class="fa fa-linkedin-square"></i>
+                        <i class="fa fa-pinterest-square"></i>
+                        <i class="fa fa-twitter-square"></i>
+                    </div>
+                </div>
+
+                <div class="home-aside">
+                    <div class="aside-header">
+                        <h3 class="text-center">Subscribe</h3>
+                    </div>
+                    <br>
+                    <div class="container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas et ex sed laoreet. Integer vel enim elit.</p>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter email">
+                        </div>
+                        <button class="btn btn-danger" style="width: 100%">Subscribe</button>
+                    </div>
+                </div>
+            </aside>
+
+            <aside class="col-md-2 right-aside" style="">
+                <div class="home-aside">
+                    <div class="aside-header">
+                        <h3 class="text-center">Categories</h3>
+                    </div>
+                    <br>
+                    <div class="container">
+                        <ul class="list-group">
+                            <li class="list-group-item">First Category</li>
+                            <li class="list-group-item">Second Category</li>
+                            <li class="list-group-item">Third Category</li>
+                            <li class="list-group-item">Third Category</li>
+                            <li class="list-group-item">Third Category</li>
+                        </ul>
+                        <br>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
 @endsection
+
     

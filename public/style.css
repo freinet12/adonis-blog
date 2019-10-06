@@ -6,10 +6,11 @@ html, body {
 }
 
 body {
+  background-color:  #eef1f7;
   font-family: 'Manjari', sans-serif;
   /*font-family: 'Montserrat', sans-serif;*/
   font-weight: 300;
-  /*background-image: url("/splash.png");*/
+  background-image: url("/splash.png");
   /*background-color: #220052;*/
   /*color: #fff;*/
 }
@@ -19,12 +20,83 @@ body {
   padding: 0;
 }
 .main-div{
-  padding-top: 5%;
+  padding-top: 2%;
 }
-.center-mid{
-  padding-top: 15%;
-  text-align: center;
+#main-nav .nav-link{
+color: #fff!important;
+font-weight: bold;
 }
+
+.nav-button{
+  background-color:#9933ff; 
+  color:#fff
+}
+.nav-button:hover{
+  background-color: #8c1aff;
+  color: #fff;
+}
+.navbar-brand{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #bf80ff!important;
+}
+
+header{
+  border-radius: 5px;
+  padding: 2%;
+  background-color: #fff;
+}
+
+header h1{
+  font-size: 60px;
+}
+header p{
+  font-size: 20px!important;
+}
+.home-aside{
+  background-color: #fff;
+  padding-bottom: 2%;
+  margin-bottom: 5%;
+  border-radius: 5px;
+}
+.home-social-icons i{
+  padding-right: 2%;
+}
+.aside-header{
+  background-color: #220052;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: #fff;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.latest-post{
+  background-color: #fff;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+}
+.latest-post-title{
+  background-color: #fff;
+  padding: 1%;
+  margin-bottom: 2%;
+}
+
+.posts-card{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.posts-card-body{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 200px;
+  background-image: url("/splash.png");
+  background-size: 350px 200px;
+  background-color: #220052;
+  color: #fff;
+}
+
 section {
   height: 100%;
   display: flex;
@@ -57,17 +129,15 @@ section:before {
 }
 
 .title {
-  background: url("/title.svg") no-repeat;
-  width: 219px;
-  height: 36px;
+  /*background: url("/title.svg") no-repeat;
   background-size: 100%;
-  opacity: 0;
+  opacity: 0;*/
   animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 0.2s forwards;
 }
 
 .subtitle {
-  margin-top: 25px;
-  color: #BDB3CB;
+  margin-top: 20px;
+  color: #a395b7;
   font-size: 17px;
   text-align: center;
   letter-spacing: 0.5;
